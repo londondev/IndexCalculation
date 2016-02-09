@@ -3,7 +3,9 @@
         var urlBase = '/api/stock';
         var stockFactory = {};
 
-        stockFactory.upload=function(stockFile) {
-            //return 
-        }
+        stockFactory.upload = function (addStockRequest) {
+            $http.post('/api/IndexData', addStockRequest);
+        };
+
+        return stockFactory;
     }]);

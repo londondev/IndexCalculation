@@ -1,1 +1,10 @@
-﻿<div></div>
+﻿<div>
+    <input type="file" accept="csv/*" id="statement" ng-model="stockDataFileName" title="Upload Statement" data-fileread="stockData" />
+    <button ng-click="upload()">Upload</button>
+    
+    {{stockDataFileName}}
+    
+    <input type="text" ng-model="inputTest"/>
+    
+    {{inputTest}}
+</div>
