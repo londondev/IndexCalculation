@@ -6,7 +6,6 @@
     app.config(['$routeProvider', function ($routeProvider) {
 
         $routeProvider.when('/stockPrice', {
-
             templateUrl: 'app/stockprice/templates/stockPrice.html',
             controller: 'stockPriceController',
             controllerAs: 'vm',
