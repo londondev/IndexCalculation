@@ -5,23 +5,24 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StockPrice.Data;
 using StockPriceService.Messages;
 
 namespace StockPriceService
 {
     internal class CsvDataParser : IFileDataParser
     {
-        public IEnumerable<StockData> GetStockData(Stream fileContent)
+        public IEnumerable<Stock> GetStockData(Stream fileContent)
         {
             List<string> contentLines = GetLinesFromStream(fileContent);
             //INDEX_NAME,DATE,      STOCK_ID,NAME,  PRICE,NUM_SHARES
             //FTRND,     2015-01-01,98OLSGD, StockA,1990, 6179
          contentLines.RemoveAt(0); //Remove header   
-         return contentLines.Select(a => a.Split(',')).Select(s => new StockData
+         return contentLines.Select(a => a.Split(',')).Select(s => new Stock
                 {
                     IndexName = s[0],
                     Name=s[3],
-                    Id = s[2],
+                    StockId = s[2],
                     Date = Convert.ToDateTime(s[1], CultureInfo.CurrentCulture),
                     Price = Convert.ToDecimal(s[4]),
                     Share = Convert.ToInt32(s[5])

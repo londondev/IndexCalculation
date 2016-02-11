@@ -9,6 +9,8 @@ Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPrice.Tests", "StockPr
 EndProject
 Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPriceService", "StockPriceService\StockPriceService.csproj", "{5A523494-48B2-42FE-9FCC-E336037AC1E0}"
 EndProject
+Project("{FAE04EC0-301F-11D3-BF4B-00C04F79EFBC}") = "StockPrice.Data", "StockPrice.Data\StockPrice.Data.csproj", "{40830B26-68BB-4BC3-A83B-306503FC6FA7}"
+EndProject
 Global
 	GlobalSection(SolutionConfigurationPlatforms) = preSolution
 		Debug|Any CPU = Debug|Any CPU
@@ -27,6 +29,10 @@ Global
 		{5A523494-48B2-42FE-9FCC-E336037AC1E0}.Debug|Any CPU.Build.0 = Debug|Any CPU
 		{5A523494-48B2-42FE-9FCC-E336037AC1E0}.Release|Any CPU.ActiveCfg = Release|Any CPU
 		{5A523494-48B2-42FE-9FCC-E336037AC1E0}.Release|Any CPU.Build.0 = Release|Any CPU
+		{40830B26-68BB-4BC3-A83B-306503FC6FA7}.Debug|Any CPU.ActiveCfg = Debug|Any CPU
+		{40830B26-68BB-4BC3-A83B-306503FC6FA7}.Debug|Any CPU.Build.0 = Debug|Any CPU
+		{40830B26-68BB-4BC3-A83B-306503FC6FA7}.Release|Any CPU.ActiveCfg = Release|Any CPU
+		{40830B26-68BB-4BC3-A83B-306503FC6FA7}.Release|Any CPU.Build.0 = Release|Any CPU
 	EndGlobalSection
 	GlobalSection(SolutionProperties) = preSolution
 		HideSolutionNode = FALSE

@@ -4,13 +4,14 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StockPrice.Data;
 using StockPriceService.Messages;
 
 namespace StockPriceService
 {
     internal class ExcelDataParser:IFileDataParser
     {
-        public IEnumerable<StockData> GetStockData(Stream fileData)
+        public IEnumerable<Stock> GetStockData(Stream fileData)
         {
             throw new NotImplementedException();
         }

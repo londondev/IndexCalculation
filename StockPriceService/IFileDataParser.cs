@@ -4,12 +4,13 @@ using System.IO;
 using System.Linq;
 using System.Text;
 using System.Threading.Tasks;
+using StockPrice.Data;
 using StockPriceService.Messages;
 
 namespace StockPriceService
 {
     internal interface IFileDataParser
     {
-        IEnumerable<StockData> GetStockData(Stream fileContent);
+        IEnumerable<Stock> GetStockData(Stream fileContent);
     }
 }
