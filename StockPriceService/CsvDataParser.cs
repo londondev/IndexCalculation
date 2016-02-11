@@ -10,7 +10,7 @@ using StockPriceService.Messages;
 
 namespace StockPriceService
 {
-    internal class CsvDataParser : IFileDataParser
+    public class CsvDataParser : IFileDataParser
     {
         public IEnumerable<Stock> GetStockData(Stream fileContent)
         {

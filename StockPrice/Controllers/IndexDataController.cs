@@ -17,10 +17,10 @@ namespace StockPrice.Controllers
     {
         private IStockDataManager _stockDataManager;
 
-        public IndexDataController()
+        public IndexDataController(IStockDataManager stockDataManager)
         {
             //TODO: Install DI framework and don't use "new"
-            _stockDataManager=new StockDataManager();
+            _stockDataManager = stockDataManager;
         }
 
 

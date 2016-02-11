@@ -13,11 +13,9 @@ namespace StockPriceService
 
         private IFileDataParser _fileDataParser;
 
-        public StockDataManager()
+        public StockDataManager(IFileDataParser fileDataParser)
         {
-            //TODO: Install DI framework and don't use "new"
-            //TODO: DI Framework should choose appropriate FileDataParser based on file extension
-            _fileDataParser=new CsvDataParser();
+            _fileDataParser=fileDataParser;
         }
         public IndexData CalculateIndex(FileData fileData)
         {
@@ -39,7 +37,7 @@ namespace StockPriceService
             {
                 var context = new StockContext();
                 context.Stocks.AddRange(stockData);
-                context.SaveChanges();
+                context.SaveChangesAsync();
             }
             catch (Exception)
             {

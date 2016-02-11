@@ -17,7 +17,8 @@
 
             
 
-           function saveModel() {
+            function saveModel() {
+                $scope.isLoading = true;
                 stockPriceFactory.saveModel($scope.stockData).
                     then(function(response) {
                         $scope.stockDataList = response.dataTableData;
@@ -26,6 +27,7 @@
                         addOrderNumberToPlotData();
                         preparePlotChartData($scope.plotChartCoreData);
                         preparePieChartData(response.pieChartData);
+                        $scope.isLoading = false;
                     });
             }
 

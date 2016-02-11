@@ -9,7 +9,7 @@ using StockPriceService.Messages;
 
 namespace StockPriceService
 {
-    internal class ExcelDataParser:IFileDataParser
+    public class ExcelDataParser:IFileDataParser
     {
         public IEnumerable<Stock> GetStockData(Stream fileData)
         {
