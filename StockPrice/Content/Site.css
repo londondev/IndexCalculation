@@ -22,3 +22,6 @@ table {
     display: block;  max-height: 400px;overflow-y: scroll;
 }
 
+.loadingText {
+    color:red
+}

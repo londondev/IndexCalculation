@@ -38,7 +38,7 @@ namespace StockPrice.App_Start
                 // by convention. It is not working for some reason now. I am registering manually for until fix it.
                 initialise.For<IStockDataManager>().Use<StockDataManager>();
                 // TODO: As we have more than one FileDataParser(CSV and EXCEL), this should be set parametically.
-                // Since excel class is not implemented yet, it will stay as this until excel class is implemented.
+                // Since exceldata parser class is not implemented yet, it will stay as this until excel class is implemented.
                 initialise.For<IFileDataParser>().Use<CsvDataParser>();
                 initialise.SetAllProperties(action => action.NameMatches(name => name.EndsWith("Manager", StringComparison.OrdinalIgnoreCase)));
             });

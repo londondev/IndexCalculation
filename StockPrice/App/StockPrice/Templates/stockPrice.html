@@ -6,11 +6,13 @@
             <div>
                 <input type="file" name="attachment" class="form-control" data-file-model="stockData.attachment"/>
                 <input type="button" class="btn btn-primary" value="Upload" data-ng-click="saveModel()"/>
-                <div ng-show="isLoading===true"><label style="color:red">Loading...</label></div>
+                <div ng-show="isLoading===true"><label class="loadingText">Loading...</label>
+                </div>
             </div>
         </div>
     </form>
 </div>
+<hr>
 <div class="container" ng-show="hasDataLoaded===true">
     <div class="col-lg-6">
         <div class="row">
