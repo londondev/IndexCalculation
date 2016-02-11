@@ -22,7 +22,7 @@
                 <select name="repeatSelect" ng-model="endDate">
                     <option ng-repeat="date in endDates">{{date}}</option>
                 </select>
-                <input type="button" class="btn btn-primary btn-xs " value="Update Graph" data-ng-click="updateGraph()" />
+                <input type="button" class="btn btn-primary btn-xs " value="Update Plot Graph" data-ng-click="updateGraph()" />
             </div>
             <highchart id="chart1" config="highchartsIndex"></highchart>
             <highchart id="chart2" config="highchartsPie"></highchart>
