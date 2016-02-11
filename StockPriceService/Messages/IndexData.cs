@@ -15,7 +15,7 @@ namespace StockPriceService.Messages
 
     public class IndexDate
     {
-        public DateTime DateTime { get; set; }
+        public string Date { get; set; }
         public Decimal Index { get; set; }
     }
 

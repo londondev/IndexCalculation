@@ -12,19 +12,35 @@
        
 </head>
 <body class="container">
-    <div ng-view></div>
 
-    <!--TODO: Install Gulp or Grunt and generate minified app.js automatically-->
-    <script src="/Scripts/jquery-1.10.2.min.js"></script>
-    <script src="/Scripts/bootstrap.js"></script>
-    <script src="/Scripts/respond.js"></script>
-    <script src="/Scripts/angular.min.js"></script>
-    <script src="/Scripts/angular-route.min.js"></script>
-    <script src="/Scripts/angular-resource.min.js"></script>
-    <script src="/Scripts/jquery.base64.js"></script>
-    <script src="/app/StockPrice/app.js"></script>
-    <script src="/app/StockPrice/Factory/stockPriceFactory.js"></script> 
-    <script src="/app/StockPrice/Controller/stockPriceController.js"></script>
-    <script src="/app/StockPrice/Directives/fileUploader.js"></script>
+    <nav class="navbar navbar-default">
+        <div class="container-fluid">
+            <div class="navbar-header">
+                <a class="navbar-brand" href="#/home">
+                    Home
+                </a>
+                <a class="navbar-brand" href="#/StockPrice">
+                    Upload Stock Price
+                </a>
+            </div>
+        </div>
+    </nav>
+<div ng-view></div>
+
+
+<script src="/Scripts/jquery-1.10.2.min.js"></script>
+<script src="/Scripts/bootstrap.js"></script>
+<script src="/Scripts/respond.js"></script>
+<script src="/Scripts/angular.min.js"></script>
+<script src="/Scripts/angular-route.min.js"></script>
+<script src="/Scripts/angular-resource.min.js"></script>
+<script src="/Scripts/highcharts.js"></script>
+<script src="/Scripts/highcharts-ng.js"></script>
+<script src="/Scripts/underscore.js"></script>
+<!--TODO: Install Gulp or Grunt and generate minified app.js automatically-->
+<script src="/app/StockPrice/app.js"></script>
+<script src="/app/StockPrice/Factory/stockPriceFactory.js"></script>
+<script src="/app/StockPrice/Controller/stockPriceController.js"></script>
+<script src="/app/StockPrice/Directives/fileUploader.js"></script>
 </body>
 </html>

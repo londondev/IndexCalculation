@@ -138,6 +138,7 @@
     <Content Include="App\StockPrice\Controller\stockPriceController.js" />
     <Content Include="App\StockPrice\Directives\fileUploader.js" />
     <Content Include="App\StockPrice\Factory\stockPriceFactory.js" />
+    <Content Include="App\StockPrice\Templates\home.html" />
     <Content Include="App\StockPrice\Templates\stockPrice.html" />
     <Content Include="Content\bootstrap.css" />
     <Content Include="Content\bootstrap.min.css" />
@@ -184,6 +185,8 @@
     <Content Include="Scripts\angular-animate.min.js.map" />
     <Content Include="Scripts\angular.min.js.map" />
     <None Include="Scripts\jquery-1.10.2.intellisense.js" />
+    <Content Include="Scripts\highcharts-ng.js" />
+    <Content Include="Scripts\Highcharts.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-dj.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-er.js" />
     <Content Include="Scripts\i18n\angular-locale_aa-et.js" />
@@ -933,6 +936,7 @@
     <Content Include="Scripts\modernizr-2.6.2.js" />
     <Content Include="Scripts\respond.js" />
     <Content Include="Scripts\respond.min.js" />
+    <Content Include="Scripts\underscore.js" />
     <Content Include="Web.config" />
     <Content Include="Web.Debug.config">
       <DependentUpon>Web.config</DependentUpon>
@@ -945,7 +949,6 @@
     <Content Include="Index.html" />
     <Content Include="Scripts\jquery-1.10.2.min.map" />
     <Content Include="Scripts\version.json" />
-    <Content Include="Scripts\jquery.base64.js" />
   </ItemGroup>
   <ItemGroup>
     <ProjectReference Include="..\StockPriceService\StockPriceService.csproj">

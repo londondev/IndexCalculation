@@ -1,7 +1,7 @@
 ﻿(function () {
     'use strict';
 
-    var app = angular.module('app', ['ngResource', 'ngRoute']);
+    var app = angular.module('app', ['ngResource', 'ngRoute', 'highcharts-ng']);
 
     app.config(['$routeProvider', function ($routeProvider) {
 
@@ -11,31 +11,16 @@
             controllerAs: 'vm',
             caseInsensitiveMatch: true
         });
+        $routeProvider.when('/home', {
+            templateUrl: '/app/stockprice/templates/home.html',
+            caseInsensitiveMatch: true
+        });
         $routeProvider.otherwise({
-            redirectTo: '/stockPrice'
+            redirectTo: '/home'
         });
     }]);
     
-    app.directive("fileread", [
-    function () {
-        return {
-            scope: {
-                fileread: "="
-            },
-            link: function (scope, element, attributes) {
-                element.bind("change", function (changeEvent) {
-                    var reader = new FileReader();
-                    reader.onload = function (loadEvent) {
-                        scope.$apply(function () {
-                            scope.fileread = loadEvent.target.result;
-                        });
-                    };
-                    reader.readAsDataURL(changeEvent.target.files[0]);
-                });
-            }
-        };
-    }
-    ]);
+   
 
 })();
 

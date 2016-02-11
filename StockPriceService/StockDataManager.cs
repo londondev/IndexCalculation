@@ -47,7 +47,7 @@ namespace StockPriceService
                     Id = s.Id,
                     IndexName = s.IndexName,
                     Name = s.Name,
-                    Weight = s.Price*s.Share*100/stockDatas.Where(ss => ss.Date == s.Date).Sum(ss => ss.Price*ss.Share)
+                    Weight = Math.Round(s.Price*s.Share*100/stockDatas.Where(ss => ss.Date == s.Date).Sum(ss => ss.Price*ss.Share),3)
                 }).ToList();
 
                weightedStockDataList.AddRange(weightedDayStockList);
@@ -62,8 +62,8 @@ namespace StockPriceService
             return stockDatas.Where(s=>s.Date==lastDate).Select(a => new StockWeight
             {
                 StockId = a.Id,
-                Weight = a.Price*a.Share
-            }).ToList();
+                Weight = Math.Round(a.Price * a.Share * 100 / stockDatas.Where(ss => ss.Date == lastDate).Sum(ss => ss.Price * ss.Share), 3)
+            }).ToList().OrderBy(a=>a.Weight).Take(5).ToList();
         }
 
         private IList<IndexDate> CalculateIndexes(IList<StockData> stockDatas)
@@ -77,8 +77,8 @@ namespace StockPriceService
                 var currentDateValue = GetIndexValue(stockDatas, date);
                 indexDateList.Add(new IndexDate
                 {
-                     DateTime = date,
-                     Index = currentDateValue * INITIAL_INDEX_LEVEL / firstDayIndexValue
+                     Date = date.ToString("MMM-dd"),
+                     Index = Math.Round(currentDateValue * INITIAL_INDEX_LEVEL / firstDayIndexValue,3)
                 });
             }
             return indexDateList;
